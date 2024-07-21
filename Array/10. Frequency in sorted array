@@ -1,0 +1,10 @@
+def freq(self, nums: List[int]) -> None:
+    count = 1
+    for(i=1;i<len(nums);i=+1):
+        if(nums[i] == nums[i-1]):
+            count += 1
+        else:
+            print(nums[i-1], count)
+            count = 1
+    if(len(nums) == 1 || nums[len(nums)-1] != nums[len(nums)-2]):
+        print(nums[len(nums)-1], 1)
