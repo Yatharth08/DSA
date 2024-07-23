@@ -1,0 +1,26 @@
+#code
+from typing import List
+class Solution:
+    def max_even_odd(self, nums: List[int]) -> int:
+        # 10, 12, 14, 7, 8
+        # 14, 7, 8
+        
+        if len(nums) == 1:
+            return 1
+            
+        count = 1
+        max_count = 1
+        for i in range(0, len(nums)-1):
+            if (nums[i] % 2 == 0 and nums[i+1] % 2 == 0) or (nums[i] % 2 == 1 and nums[i+1] % 2 == 1):
+                count = 1
+            else:
+                count += 1
+            if count > max_count:
+                max_count = count
+            
+        return max_count
+                
+if __name__ == "__main__":
+    arr = [5, 10, 20, 6, 3, 8]
+    solution = Solution()
+    print(solution.max_even_odd(arr))  # Output should be 3
