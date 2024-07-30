@@ -1,0 +1,11 @@
+def subArrayGivenSum(arr, n, sum):
+    curr = 0 
+    start_point = 0
+    for i in range(0, n):
+        curr += arr[i]
+        while(curr > sum):
+            curr -= arr[start_point]
+            start_point += 1
+        if curr == sum:
+            return "Yes"
+    return "No"
