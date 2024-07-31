@@ -1,0 +1,26 @@
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+
+        # nums = [1,7,3,6,5,6]
+        # left_arr [0, 1, 8, 11, 17, 22, 28, 0]
+        left_arr = [0]
+        for i in range(0, len(nums)):
+            left_arr.append(nums[i] + left_arr[-1])
+        left_arr.append(0)
+        #print("left_arr", left_arr)
+
+        # right_arr [0, 28, 27, 20, 17, 11, 6, 0]
+        right_arr = [0]
+        for i in range(len(nums)-1, -1, -1):
+            right_arr.append(nums[i] + right_arr[-1])
+        right_arr.append(0)
+        right_arr.reverse()
+        #print("right_arr", right_arr)
+
+        j = 1
+        for i in range(0, len(nums)):
+            if left_arr[j-1] == right_arr[j+1]:
+                return i
+            j += 1
+        return -1
+        
