@@ -1,0 +1,9 @@
+class Solution:
+    #Function to return a list containing the intersection of two arrays.
+    def printIntersection(self, arr1, arr2):
+        set1 = set(arr1)
+        set2 = set(arr2)
+        intersection = set1 & set2
+        if not intersection:
+            return [-1]
+        return sorted(list(intersection))
