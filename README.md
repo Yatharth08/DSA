@@ -17,11 +17,11 @@ Continuous Updates: The repository is regularly updated with new problems and so
 
 The repository is organized into the following folders:
 
-Arrays/: Problems and solutions related to arrays.
+Arrays: Problems and solutions related to arrays.
 
-SortingSearching/: Problems and solutions related to sorting and searching algorithms.
+SortingSearching: Problems and solutions related to sorting and searching algorithms.
 
-Miscellaneous/: Other problems that don't fit into the above categories.
+Miscellaneous: Other problems that don't fit into the above categories.
 
 ## Acknowledgments
 
