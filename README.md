@@ -1,4 +1,4 @@
-#Data Structures and Algorithms (DSA) Solutions
+# Data Structures and Algorithms (DSA) Solutions
 Welcome to the Data Structures and Algorithms (DSA) Solutions repository! This repository contains a collection of problems related to various data structures and algorithms, along with their solutions. It is designed to help you strengthen your problem-solving skills and prepare for technical interviews.
 
 **Introduction**
