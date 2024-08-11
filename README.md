@@ -26,6 +26,7 @@ Miscellaneous: Other problems that don't fit into the above categories.
 ## Acknowledgments
 
 LeetCode for providing the problem statements.
+
 GeeksforGeeks for explanations and additional resources.
 
 Feel free to reach out if you have any questions or suggestions!
