@@ -1,0 +1,24 @@
+class Solution:
+    def lomuto(self, arr, l, h):
+        i = l - 1
+        pivot = arr[h]
+        for j in range(l, h):
+            if arr[j] > pivot:
+                i += 1
+                arr[i], arr[j] = arr[j], arr[i]
+        arr[i + 1], arr[h] = arr[h], arr[i + 1]
+        return i + 1
+
+	def quick(self, arr, l, h, k):
+        if l <= h:
+            p = self.lomuto(arr, l, h)
+            self.quick(arr, l, p - 1, k)
+            self.quick(arr, p + 1, h, k)
+	    
+	
+	def kLargest(self,arr, n, k):
+		# code here
+		l = 0
+        h = len(arr) - 1
+        self.quick(arr, l, h, k)
+        return arr[:k]
