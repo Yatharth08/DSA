@@ -1,0 +1,11 @@
+class Solution:
+    def findMinDiff(self, A,N,M):
+        A.sort(reverse = True)
+        low = 0
+        high = M-1
+        res = A[low] - A[high]
+        for i in range(1, 1+N-M):
+            high += 1
+            if res > A[i] - A[high]:
+                res = A[i] - A[high]
+        return res
