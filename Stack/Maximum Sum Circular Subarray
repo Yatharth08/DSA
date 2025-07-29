@@ -1,0 +1,19 @@
+class Solution(object):
+    def maxSubarraySumCircular(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        global_max, global_min = nums[0], nums[0]
+        curr_max, curr_min = 0,0
+        total = sum(nums)
+        #  maximium sum of subarray
+        for i in range(0, len(nums)):
+            curr_max = max(nums[i], curr_max+nums[i])
+            global_max = max(global_max, curr_max)
+        #  minimum sum of subarray
+        for i in range(0, len(nums)):
+            curr_min = min(nums[i], curr_min+nums[i])
+            global_min = min(global_min, curr_min)
+        return max(global_max, total-global_min) if global_max > 0 else global_max
+        
