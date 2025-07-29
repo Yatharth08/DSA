@@ -1,0 +1,24 @@
+class Solution(object):
+    def predictPartyVictory(self, senate):
+        """
+        :type senate: str
+        :rtype: str
+        """
+        rad = deque()
+        dire = deque()
+        n = len(senate)
+        for i in range(0, len(senate)):
+            if senate[i] == "R":
+                rad.append(i)
+            else:
+                dire.append(i)
+ 
+        while rad and dire:
+            d = dire.popleft()
+            r = rad.popleft()
+            if d < r:
+                dire.append(n+d)
+            else:
+                rad.append(n+r)
+        return "Radiant" if rad else "Dire"
+                
